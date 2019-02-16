@@ -23,9 +23,27 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
+
+        <?php if (isset($_SESSION['loggedIn'])) {?>
+        
+          <li class="nav-item text-info">
+            <?=$_SESSION['userName'] ?>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="php/logout.php">Log Out</a>
+          </li>
+
+        <?php } else { ?>
+
           <li class="nav-item">
             <a class="nav-link" href="signup.php">Sign Up</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.php">Log In</a>
+          </li>
+
+        <?php } ?>
+
         </ul>
       </div>
     </div>

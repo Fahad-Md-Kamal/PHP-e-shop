@@ -19,8 +19,21 @@ function TableCreate(){
     $conn->query($sql);
 
     // Creating product table
-
 }
+// function productTbl(){
+//     $conn = DataBaseConnection();
 
+//     $sql = "CREATE TABLE products(
+//     id INT(10) PRIMARY KEY AUTO_INCREMENT,
+//     name VARCHAR(50),
+//     price INT(5),
+//     image VARCHAR(20),
+//     details VARCHAR(300)
+// )";
 
+// if ($conn->error) {
+//     die("Failed to Create table products:" . $conn->error);
+// }
+// $conn->query($sql);
+// }
 ?>

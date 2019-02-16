@@ -25,8 +25,9 @@
 
 
     <!-- product list -->
+    <div class="row">
       <?php include_once"templating/product_list.php" ?>
-
+      </div>
         <!-- /.row -->
 
       </div>

@@ -25,10 +25,14 @@
           </li>
 
         <?php if (isset($_SESSION['loggedIn'])) {?>
-        
-          <li class="nav-item text-info">
-            <?=$_SESSION['userName'] ?>
+          <li class="nav-item">
+            <a class="nav-link" href="productRegistration.php">Product Reg</a>
           </li>
+          
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#"><?=$_SESSION['userName'] ?></a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="php/logout.php">Log Out</a>
           </li>

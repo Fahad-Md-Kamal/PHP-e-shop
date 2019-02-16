@@ -12,7 +12,7 @@
     <div class="row justify-content-center">
 
       <div class="col-lg-6 bg-dark text-light pb-5 pt-5">
-<!-- < ?php if(isset($_GET['name'])){  ?> -->
+
         <form action="php/userReg.php" method="post">
           <legend class="text-center text-uppercase">User Registration</legend>
           <div class="form-group">
@@ -40,7 +40,7 @@
           } ?></p>
         </form>
 
-        <!-- < ?php }?> -->
+
 
       </div>
 

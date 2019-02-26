@@ -18,10 +18,10 @@ if ($_POST) {
         $sql = "SELECT * FROM users WHERE email ='$email' AND pass = '$pass' ";
         if($result = $conn->query($sql)){
             foreach($result AS $row){
-                $_SESSION['userName'] = $row['name'];
+                $_SESSION['userName']= $userName = $row['name'];
             }
             $_SESSION['loggedIn'] = true;
-            $_SESSION['msg'] = "You are successfully Logged In";
+            $_SESSION['msg'] = "Hey<br> $userName <br>Welcome Back  ";
         }else{
             $_SESSION['msg'] = "Invalid Username or Password";
         }

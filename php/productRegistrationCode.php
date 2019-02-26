@@ -3,6 +3,7 @@
 <?php 
 session_start();
 if ($_POST) {
+    
     $name = $_POST['name'];
     $price = $_POST['price'];
     $details = $_POST['details'];
@@ -56,13 +57,17 @@ if ($_POST) {
                 if ($result->num_rows > 0) {
                     $_SESSION['msg'] = "This product already registared";
                 }else{
-                    $sql = "INSERT INTO products(name,price,details,Image) 
-                    VALUES ('$name',$price,'$details','$fileNewName')";
-                    if($conn->query($sql)){
-                        $_SESSION['msg'] = "Product is registared into the system";
-                    }else{
-                        $_SESSION['msg'] = "Product registration failed ".$conn->error;
-                    }
+
+                    
+                        $sql = "INSERT INTO products(name,price,details,Image) 
+                        VALUES ('$name',$price,'$details','$fileNewName')";
+                        if($conn->query($sql)){
+                            $_SESSION['msg'] = "Product is registared into the system";
+                        }else{
+                            $_SESSION['msg'] = "Product registration failed ".$conn->error;
+                        }
+
+                    
                 }
             }
         }

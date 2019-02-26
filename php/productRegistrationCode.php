@@ -47,15 +47,7 @@ if ($_POST) {
 
                 include_once "DB/DB_Connection.php";
                 $conn = DataBaseConnection();
-                $sql = "CREATE TABLE products(
-                    Id INT(5) PRIMARY KEY AUTO_INCREMENT,
-                    name VARCHAR(50),
-                    price INT(10),
-                    details VARCHAR(300),
-                    Image VARCHAR(30)
-                )";
-
-                $conn->query($sql);
+                
         
                 $sql = "SELECT * FROM products WHERE name = '$name'";
 

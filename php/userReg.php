@@ -21,9 +21,6 @@ if ($_POST) {
         $_SESSION['msg'] = "Re-entered password didn't matched.<br> Enter password again.";
 
     }else{
-        include_once "DB/table_Create.php";
-        TableCreate();
-
         include_once "DB/DB_Connection.php";
         $conn = DataBaseConnection();
         

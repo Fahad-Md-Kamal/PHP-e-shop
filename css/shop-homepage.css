@@ -21,3 +21,7 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+td img{
+  width: 30px;
+}

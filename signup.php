@@ -34,10 +34,12 @@
           <div class="form-group">
             <input type="submit" class="form-control btn btn-success mt-4" value="SUBMIT">
           </div>
-          <p class="h4 text-center"><?php if (isset($_SESSION['msg'])) {
-            echo($_SESSION['msg']);
-            unset($_SESSION['msg']);
-          } ?></p>
+          <p class="h4 text-center">
+            <?php if (isset($_SESSION['msg'])) {
+              echo($_SESSION['msg']);
+              unset($_SESSION['msg']);
+            } ?>
+          </p>
         </form>
 
 

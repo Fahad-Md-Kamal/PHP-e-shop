@@ -1,10 +1,7 @@
 <?php 
 
 require_once "php/DB/db_setup.php";
-
-
 session_start();
-
 ?>
 
 <!DOCTYPE html>

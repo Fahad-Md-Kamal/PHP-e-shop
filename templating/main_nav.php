@@ -18,9 +18,6 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
 
@@ -47,6 +44,18 @@
           </li>
 
         <?php } ?>
+
+        <li class="nav-item">
+        <?php 
+            if (!empty($_SESSION['cart'])) { ?>
+
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="cart.php">cart ( <?=count($_SESSION['cart'])?> )</a>
+            </li>
+
+        <?php } ?>
+        </li>
+
 
         </ul>
       </div>

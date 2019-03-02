@@ -22,10 +22,6 @@ function dbSetup(){
         email VARCHAR(100),
         pass VARCHAR(20)
     )";
-
-    if ($conn->error) {
-        die("Failed to Create table users:" . $conn->error);
-    }
     $conn->query($sql);
 
 
@@ -37,14 +33,9 @@ function dbSetup(){
         Image VARCHAR(30)
     )";
 
-    if ($conn->error) {
-        die("Failed to Create table users:" . $conn->error);
-    }
-
     $conn->query($sql);
 
     
 }
     dbSetup();
-    header("location:../../index.php");
 ?>

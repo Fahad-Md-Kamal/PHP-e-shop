@@ -27,15 +27,14 @@ if ($_POST) {
                 $_SESSION['userName']= $userName = $row['name'];
             }
             $_SESSION['loggedIn'] = true;
-            $_SESSION['msg'] = "Hey<br> $userName <br>Welcome Back  ";
+            $_SESSION['msg'] = "$userName <br>Welcome Back  ";
             unset($_SESSION['count']);
         }else{
-            $_SESSION['msg'] = "Invalid Username or Password";
             $_SESSION['count']++;
-
             if($_SESSION['count'] >= 3){
-                setcookie('loginCounter', true, time() + 10);
+                setcookie('cookie', true, time() + 10);
             }
+            $_SESSION['msg'] = "Invalid Username or Password";
         }
     }
     header("location:../login.php");

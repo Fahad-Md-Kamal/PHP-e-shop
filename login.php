@@ -11,22 +11,7 @@
 
     <div class="row justify-content-center">
 
-      <div class="col-lg-6 pb-5 pt-5">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div class="col-lg-6 pb-5 pt-5 bg-dark text-light m-3">
 
 
 
@@ -55,7 +40,7 @@ if(!isset($_COOKIE['cookie'])) {
         </form>
 
         <?php } else {
-          echo "yeah it is set";
+          echo "<p class='text-center h1'>Suspecious Login Detected</p>";
           }
           
           if (isset($_SESSION['msg'])) {

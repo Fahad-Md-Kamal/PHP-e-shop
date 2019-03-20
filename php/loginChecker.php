@@ -32,8 +32,9 @@ if ($_POST) {
         }else{
             $_SESSION['count']++;
             if($_SESSION['count'] >= 3){
-                setcookie('cookie', true, time() + 10);
-            }
+                setcookie('cookie', true, time() + 10, "/");
+                unset($_SESSION['count']);
+        }
             $_SESSION['msg'] = "Invalid Username or Password";
         }
     }
